@@ -52,7 +52,7 @@ public class BookingServiceImpl implements BookingService
 	public String insertBooking(Booking b) 
 	{   
 		brepo.save(b);
-		return " One record has been inserted";
+		return " One record has been inserted into booking details";
 		
 	}
     // Update an existing booking
@@ -60,14 +60,14 @@ public class BookingServiceImpl implements BookingService
 	public String updateBooking(Booking b) 
 	{
 		brepo.save(b);
-		return " One record has been updated";
+		return " One record has been updated into booking details";
 	}
     // Delete a booking by its ID
 	@Override
 	public String deleteBooking(Integer id) 
 	{
 		brepo.deleteById(id);
-		return " One record has been deleted";
+		return " One record has been deleted into booking details";
 	}
 
     // Get a booking by its booking date

@@ -41,21 +41,21 @@ public class CustomerServiceImpl implements CustomerService
 	public String insertCustomer(Customer c) 
 	{
 		crepo.save(c);
-		return "One record has been inserted";
+		return "One record has been inserted into customer details";
 	}
 	//update an existing customer
 	@Override
 	public String updateCustomer(Customer c) 
 	{
 		crepo.save(c);
-		return "One record has been updated";
+		return "One record has been updated into customer details";
 	}
 	// Delete a customer by their ID
 	@Override
 	public String deleteCustomer(Integer id) 
 	{
 		crepo.deleteById(id);
-		return "One record has been deleted";
+		return "One record has been deleted into customer details";
 	}
     
 	// Get a customer by their name

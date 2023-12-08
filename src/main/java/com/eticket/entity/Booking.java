@@ -1,14 +1,9 @@
 package com.eticket.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import lombok.Data;
 
 //Entity class
@@ -17,14 +12,19 @@ import lombok.Data;
 public class Booking{
 @Id
 private Integer bookingId;
-private Integer  customerId;
-private Integer  eventId;
 private String bookingDate;
 private Integer ticketsCount;
 
-/*//OneToOne Relation with Customer
-@OneToOne(targetEntity=Customer.class,cascade=CascadeType.ALL)
-private Customer customer;*/
+
+//ManyToOne Relation with customer
+@ManyToOne
+@JoinColumn(name = "customerId")
+private Customer customer;
+
+//ManyToOne Relation with event
+@ManyToOne
+@JoinColumn(name = "eventId")
+private Event event;
 
 
 }

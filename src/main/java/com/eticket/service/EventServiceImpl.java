@@ -42,21 +42,21 @@ public class EventServiceImpl implements EventService
 	public String insertEvent(Event e) 
 	{
 		erepo.save(e);
-		return " One record has been inserted";
+		return " One record has been inserted into event details";
 	}
 	//Update an existing event
 	@Override
 	public String updateEvent(Event e) 
 	{
 		erepo.save(e);
-		return " One record has been updated";
+		return " One record has been updated into event details";
 	}
 	//Delete an event by its id
 	@Override
 	public String deleteEvent(Integer id) 
 	{
 		erepo.deleteById(id);
-		return " One record has been deleted";
+		return " One record has been deleted into event details";
 	}
 	
 	//Get an event by its name

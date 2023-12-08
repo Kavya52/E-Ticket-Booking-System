@@ -44,21 +44,21 @@ public class PaymentServiceImpl implements PaymentService
 	public String insertPayment(Payment p)
 	{
 		prepo.save(p);
-		return "One record has been inserted";
+		return "One record has been inserted into payment details";
 	}
 	//update an existing payment
 	@Override
 	public String updatePayment(Payment p) 
 	{
 		prepo.save(p);
-		return "One record has been updated";
+		return "One record has been updated into payment details";
 	}
 	//delete payment by its id
 	@Override
 	public String deletePayment(Integer id) 
 	{
 		prepo.deleteById(id);
-		return "One record has been deleted";
+		return "One record has been deleted into payment details";
 	}
 	//Get a payment by its mode
 	@Override
